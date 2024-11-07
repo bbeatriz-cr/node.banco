@@ -1,0 +1,27 @@
+{{>partials/header}}
+
+Opa {{name}} {{lastName}}, tudo bem?
+{{#showOld}}
+    Como vai a vida?
+{{/showOld}}
+{{^showOld}}
+    Beleza?
+{{/showOld}}
+
+<hr/>
+
+<h2>Novo Usuário</h2>
+    <form action="/novousuario" method="POST">
+        <input type="text" name="name" placeholder="Digite seu nome"><br>
+        <input type="number" name="age" placeholder="Digite sua idade"><br>
+        <button type="submit" value="Cadastrar Usuário">Enviar</button>
+    </form>
+
+<hr/>
+
+<h2>Usuários do Banco</h2>
+{{#users}}
+    <li>Nome: {{name}} - Idade: {{age}}</li>
+{{/users}}
+
+{{>partials/footer}}
