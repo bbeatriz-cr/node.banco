@@ -1,15 +1,5 @@
 {{>partials/header}}
 
-Opa {{name}} {{lastName}}, tudo bem?
-{{#showOld}}
-    Como vai a vida?
-{{/showOld}}
-{{^showOld}}
-    Beleza?
-{{/showOld}}
-
-<hr/>
-
 <h2>Novo Usuário</h2>
     <form action="/novousuario" method="POST">
         <input type="text" name="name" placeholder="Digite seu nome"><br>
